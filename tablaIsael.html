@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="tablaIsael.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <title>Send money || Project ISAEL</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <nav class="navbar-contenedor">
+    <div class="container">
+
+      <div class="form-container">
+        <form class="form inputs-container" id="form">
+          <div class="input-item wallet">
+            <i class="fa-solid fa-credit-card"></i>
+            <input class="search wallet" type="search" placeholder="Wallet receiver" id="id-wallet">
+          </div>
+  
+          <div class="input-item amount">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <input class="search amount" type="search" placeholder="Amount" id="id-amount">
+          </div>
+  
+        </div>
+  
+        <div class="btn-container">
+          <i class="fa-solid fa-arrow-right"></i>
+          <input class="boton-submit" type="submit" value="Submit" id="id-submit">
+        </div>
+        </form>
+    </div>
+  </nav>
+
+  <div class="table-central" id="id-table">
+    <table>
+      <thead>
+        <tr>
+          <th class="monserrat-b">Wallet</th>
+          <th class="monserrat-b">Date</th>
+          <th class="monserrat-b">Amount</th>
+          <th class="monserrat-b">Status</th>
+          <th class="monserrat-b">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>#1234</td>
+          <td>23/04/2015</td>
+          <td>$500</td>
+          <td>Aproved</td>
+          <td>
+            <i class="fa-solid fa-ellipsis" id="id-actions"></i>
+
+            <div class="actions-container">
+              <i class="fa-solid fa-eye"></i>
+              <i class="fa-solid fa-thumbs-up"></i>
+              <i class="fa-solid fa-spinner"></i>
+              <i class="fa-regular fa-trash-can"></i>
+            </div>
+            <div class="actions-mobile">
+              <div class="action check">
+                <i class="fa-solid fa-eye"></i>
+                <span>Check status</span>
+              </div>
+              <div class="action approve">
+                <i class="fa-solid fa-thumbs-up"></i>
+                <span>Approve</span>
+              </div>
+              <div class="action execute">
+                <i class="fa-solid fa-spinner"></i>
+                <span>Execute</span>
+              </div>
+              <div class="action revoke">
+                <i class="fa-regular fa-trash-can"></i>
+                <span>Revoke</span>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <script src="index.js"></script>
+</body>
+
+</html>

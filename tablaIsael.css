@@ -1,0 +1,281 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+}
+
+.monserrat-b {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+.container {
+  margin: 0 auto;
+  width: calc(100vw - 20px);
+}
+
+.navbar-contenedor {
+  padding: 17px 0;
+}
+
+.navbar-contenedor .container {
+  display: grid;
+  grid-gap: 10px;
+}
+
+.inputs-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: minmax(105px, 2fr) minmax(85px, 1.25fr);
+}
+
+.search {
+  border-radius: 8px;
+  border: none;
+  font-family: 'Montserrat';
+  line-height: 29px;
+  outline: none;
+  width: 100%;
+}
+
+.input-item {
+  height: 31px;
+  top: 1px;
+  border: 1px solid #9E9E9E;
+  border-radius: 8px;
+  padding-left: 32px;
+  position: relative;
+}
+
+.input-item.wallet,
+.input-item.amount {
+  width: 100%;
+}
+
+.input-item .fa-solid {
+  color: #9E9E9E;
+  font-size: 13.5px;
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.btn-container {
+  position: relative;
+  transition: opacity .3s ease-in-out;
+  width: 100%;
+}
+
+.btn-container:hover {
+  opacity: .7;
+}
+
+.btn-container .fa-solid.fa-arrow-right {
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 13.14px;
+  left: 12px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.boton-submit {
+  align-items: center;
+  background: #624DE3;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: bold;
+  height: 31px;
+  outline: none;
+  text-align: center;
+  width: 100%;
+}
+
+.actions-container {
+  display: none;
+}
+
+table {
+  border-spacing: unset;
+  width: 100vw;
+}
+
+table tr {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+}
+
+table tr th {
+  height: 35px;
+  line-height: 35px;
+  font-size: 14px;
+}
+
+table tr td {
+  font-size: 14px;
+  height: 40px;
+  line-height: 40px;
+}
+
+table tr td .fa-ellipsis {
+  font-size: 22.85px;
+  line-height: 40px;
+width: 70px;height: 40px;cursor: pointer;}
+
+table tr th:nth-child(even),
+table tr td:nth-child(even) {
+  display: none;
+}
+
+table tbody tr:nth-child(odd) {
+  background-color: #F7F6FE;
+}
+
+@media screen and (min-width: 375px) {
+
+  .boton-submit {
+    padding-left: 31.5px;
+    text-align: left;
+  }
+
+  .inputs-container {
+    grid-template-columns: minmax(105px, 300px) minmax(85px, 130px);
+  }
+
+  .navbar-contenedor .container {
+    grid-template-columns: minmax(200px, 430px) minmax(89.5px, 130px);
+  }
+
+}
+
+@media screen and (min-width: 515px) {
+
+  .inputs-container {
+    grid-gap: 25.5px;
+  }
+
+  .navbar-contenedor .container {
+    justify-content: space-between;
+  }
+
+  .container {
+    max-width: 1440px;
+    width: 90%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+  .navbar-contenedor {
+    padding: 40px 0;
+  } 
+
+  .boton-submit {
+    font-size: 16px;
+    height: 40px;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .input-item {
+    height: 40px;
+    line-height: 39px;
+  }
+
+  .btn-container .fa-solid.fa-arrow-right {
+    font-size: 16px;
+  }
+
+  table tr th {
+    height: 49px;
+    line-height: 49px;
+    font-size: 16px;
+  }
+
+  table tr {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  table tr td {
+    height: 63px;
+    line-height: 63px;
+    font-size: 16px;
+  }
+
+  table tr th:nth-child(even),
+  table tr td:nth-child(even) {
+    display: block;
+  }
+
+  table tr td .fa-ellipsis {
+    display: none;
+  }
+
+  .actions-mobile {
+    display: none;
+  }
+
+  .actions-container {
+    align-items: center;
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(4, 20px);
+    height: 100%;
+    justify-content: center;
+  }
+
+  .actions-container i {
+    cursor: pointer;
+    font-size: 20px;
+    transition: opacity .3s ease-in-out;
+  }
+
+  .actions-container i:hover {
+    opacity: 0.7;
+  }
+
+  .actions-container i.fa-eye {
+    color: #3B42E1;
+  }
+
+  .actions-container i.fa-thumbs-up {
+    color: #77D180;
+  }
+
+  .actions-container i.fa-spinner {
+    color: #88288A;
+  }
+
+  .actions-container i.fa-trash-can {
+    color: #A30D11;
+  }
+
+  table {
+    margin: 0 auto;
+    max-width: 1440px;
+    width: 90%;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+}
