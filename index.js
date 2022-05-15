@@ -2,18 +2,23 @@
 document.addEventListener('DOMContentLoaded', function() {
 
   // Variables.
-  const actionsPoints = document.querySelector('#id-actions');
-  const actionsMobile = document.querySelector('.actions-mobile');
-  const actionsClass = actionsMobile.classList;
+  const actionsPoints = document.querySelectorAll('.points-actions');
+  const actionsMobile = document.querySelectorAll('.actions-mobile');
 
-  
   // Funciones
-  const handleToggle = () => {
-    actionsClass.toggle('active');
+  const handleToggle = (index) => {
+    actionsMobile.forEach((action, indexAction) => {
+      if(index !== indexAction) {
+        action.classList.remove('active');
+      }
+    });
+    actionsMobile[index].classList.toggle('active');
   }
 
 
   // Listeners.
-  actionsPoints.addEventListener('click', handleToggle);
+  actionsPoints.forEach((action, index) => (
+    action.addEventListener('click', () => handleToggle(index))
+  ))
 
 });
